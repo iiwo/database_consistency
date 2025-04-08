@@ -48,6 +48,7 @@ require 'database_consistency/writers/simple/three_state_boolean'
 require 'database_consistency/writers/simple/missing_association_class'
 require 'database_consistency/writers/simple/missing_table'
 require 'database_consistency/writers/simple/implicit_order_column_missing'
+require 'database_consistency/writers/simple/missing_pk_or_replica_identity'
 require 'database_consistency/writers/simple_writer'
 
 require 'database_consistency/writers/autofix/helpers/migration'
@@ -73,6 +74,7 @@ require 'database_consistency/processors/columns_processor'
 require 'database_consistency/processors/validators_fractions_processor'
 require 'database_consistency/processors/indexes_processor'
 require 'database_consistency/processors/models_processor'
+require 'database_consistency/processors/implicit_tables_processor'
 
 require 'database_consistency/checkers/base_checker'
 
@@ -81,6 +83,8 @@ require 'database_consistency/checkers/enum_checkers/enum_type_checker'
 
 require 'database_consistency/checkers/model_checkers/model_checker'
 require 'database_consistency/checkers/model_checkers/missing_table_checker'
+require 'database_consistency/checkers/model_checkers/missing_pk_or_replica_identity_checker'
+require 'database_consistency/checkers/implicit_tables_checker'
 
 require 'database_consistency/checkers/association_checkers/association_checker'
 require 'database_consistency/checkers/association_checkers/missing_index_checker'
